@@ -1,0 +1,559 @@
+﻿body#about main #innerBanner {
+    background-image: url('/Content/images/aboutBg.png');
+}
+
+body#blog main #innerBanner {
+    background-image: url('/Content/images/blogBg.png');
+}
+
+body#contact main #innerBanner {
+    background-image: url('/Content/images/contactBg.png');
+}
+
+body#services main #innerBanner {
+    background-image: url('/Content/images/servicesBg.png');
+}
+
+body#products main #innerBanner {
+    background-image: url('/Content/images/productsBg.png');
+}
+
+
+
+
+
+
+main #innerBanner {
+    background-position: center center;
+    background-repeat: no-repeat;
+    clear: both;
+    height: auto;
+    min-height: 80vh;
+    width: 100%;
+}
+
+main #innerBanner .container-fluid {
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+main #innerBanner .container-fluid h2 {
+    color: rgba(255, 255, 255, 1);
+    font-family: inderRegular;
+    font-size: 2.5em;
+    margin: auto;
+    padding: 7em 0 0 0;
+    text-transform: uppercase;
+}
+
+main #innerBanner .container-fluid h2 span {
+    font-size: 2.25em;
+}
+
+
+
+main #innerBanner .container-fluid p {
+    color: rgba(255, 255, 255, 1);
+    font-family: inderRegular;
+    font-size: 1.2em;
+    font-style: italic;
+    padding: 0 0 0.5em 0;
+}
+
+
+
+.bg-unique {
+    background-color: rgba(19, 104, 155, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+.btn-unique {
+    background-color: rgba(19, 104, 155, 1);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 1);
+}
+
+.btn-unique:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+/* About Page Styles Starts Here
+----------------------------------------------*/
+
+main #aboutInfo {
+    clear: both;
+    display: flex;
+    height: auto;
+    margin: 0;
+    min-height: 50vh;
+    padding: 0;
+    width: 100%;
+}
+
+
+main #aboutInfo div {
+    flex: 4;
+    height: 100%;
+    padding: 2em 2.5em;
+}
+
+main #aboutInfo div h2 {
+    color: rgba(19, 104, 155, 1);
+    font-size: 1.8em;
+    font-weight: 900;
+    padding: 0.5em 0.4em;
+}
+
+main #aboutInfo div p {
+    font-size: 1.3em;
+    padding: 0.5em;
+    text-align: justify;
+}
+
+
+main #aboutInfo div p strong {
+    color: rgba(19, 104, 155, 1);
+}
+
+
+main #aboutInfo aside {
+    background-color: rgba(200, 200, 200, 1);
+    flex: 2;
+    padding: 2em 2.5em;
+}
+
+
+main #aboutInfo aside h2 {
+    color: rgba(19, 104, 155, 1);
+    font-size: 1.8em;
+    font-weight: 900;
+    padding: 0.5em 0.3em;
+}
+
+main #aboutInfo aside p {
+    color: rgba(10, 10, 10, 1);
+    font-size: 1.3em;
+    padding: 0.25em 0 0 0.5em;
+    text-align: justify;
+}
+
+main #aboutInfo aside p span {
+    color: rgba(19, 104, 155, 1);
+}
+
+
+/* Team Page Styles Starts Here
+----------------------------------------------*/
+
+main #teamInfo {
+    clear: both;
+    height: auto;
+    margin: 0;
+    min-height: 70vh;
+    padding: 0;
+    width: 100%;
+}
+
+
+main #teamInfo .teamCon {
+    clear: both;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+main #teamInfo .teamCon div {
+    background-color: rgba(19, 104, 155, 1);
+    color: rgba(255, 255, 255, 1);
+    flex: 3;
+    height: 100%;
+    padding: 5em 3em;
+    text-align: center;
+}
+
+main #teamInfo .teamCon div h2 {
+    font-family: inderRegular;
+    font-size: 1.5em;
+    padding: 0.2em;
+}
+
+main #teamInfo .teamCon div h3 {
+    font-family: inderRegular;
+    font-size: 1.3em;
+    margin: 0 0 0.5em 0;
+    padding: 0.2em;
+}
+
+main #teamInfo .teamCon div h4 {
+    font-size: 1.05em;
+}
+
+main #teamInfo .teamCon div p {
+    font-size: 1.3em;
+    padding: 0.5em;
+    text-align: justify;
+}
+
+main #teamInfo .teamCon div a {
+    border: 2px solid rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.3em;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+}
+
+
+main #teamInfo .teamCon div:nth-child(even) {
+    background-color: rgba(0, 53, 83, 1);
+}
+
+main #teamInfo .teamCon:nth-child(even) div:nth-child(odd) {
+    background-color: rgba(0, 53, 83, 1);
+}
+
+main #teamInfo .teamCon:nth-child(even) div:nth-child(even) {
+    background-color: rgba(19, 104, 155, 1);
+}
+
+
+
+
+
+main #teamStrenght {
+    clear: both;
+    display: flex;
+    height: auto;
+    margin: 0;
+    min-height: 80vh;
+    padding: 0;
+    width: 100%;
+}
+
+
+main #aboutInfo div {
+    flex: 4;
+    height: 100%;
+    padding: 2em 2.5em;
+}
+
+
+
+/* Website Development Page Styles Starts Here
+----------------------------------------------*/
+
+main #webDev {
+    background-color: rgba(50, 50, 50, 1);
+    clear: both;
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    height: auto;
+    margin: 0;
+    min-height: 50vh;
+    padding: 0;
+    width: 100%;
+}
+
+
+main #webDev > div {
+    background-color: rgba(19, 104, 155, 1);
+    flex: 2;
+    height: fill-available;
+    padding: 3em;
+}
+
+main #webDev > div h2 {
+    clear: both;
+    font-family: inderRegular;
+    font-size: 1.8em;
+    padding: 0.25em 0;
+}
+
+main #webDev > div h3 {
+    clear: both;
+    font-family: inderRegular;
+    font-size: 1.25em;
+    margin: 0 0 1em 0;
+    padding: 0;
+}
+
+main #webDev > div p {
+    font-family: inderRegular;
+    font-size: 1.2em;
+    padding: 0 0 0.5em 0;
+}
+
+main #webDev > div a {
+    border: 1px solid rgba(255, 255, 255, 1);
+    clear: both;
+    color: rgba(255, 255, 255, 1);
+    font-family: inderRegular;
+    font-size: 1.5em;
+    margin: 1em 0 0 0;
+    padding: 0.25em 1em;
+    text-decoration: none;
+}
+
+
+
+main #webDev > div:nth-child(2) {
+    background-color: rgba(19, 104, 155, 0.4);
+    flex: 1;
+    text-align: center;
+}
+
+main #webDev > div:nth-child(3) {
+    background-color: rgba(19, 104, 155, 0.6);
+    flex: 1;
+    text-align: center;
+}
+
+main #webDev > div:nth-child(4) {
+    background-color: rgba(19, 104, 155, 0.8);
+    flex: 1;
+    text-align: center;
+}
+
+main #webDev > div:nth-child(5) {
+    background-color: rgba(19, 104, 155, 1);
+    flex: 1;
+    text-align: center;
+}
+
+
+
+main #notice {
+    background-color: rgba(255, 255, 255, 1);
+    clear: both;
+    color: rgba(19, 104, 155, 1);
+    display: flex;
+    height: auto;
+    margin: 0;
+    min-height: 20vh;
+    padding: 0;
+    width: 100%;
+}
+
+
+
+main #notice > div {
+    background-color: rgba(250, 250, 250, 1);
+    flex: 2;
+    height: fill-available;
+    padding: 3em;
+}
+
+main #notice > div:nth-child(2) {
+    background-color: transparent !important;
+    flex: 5;
+}
+
+main #notice > div h2 {
+    clear: both;
+    font-family: inderRegular;
+    font-size: 1.8em;
+    padding: 0.25em 0;
+}
+
+
+
+
+
+
+
+/* Product Container Styles Here
+---------------------------------------------*/
+
+main div.productCon {
+    background-color: rgba(255, 255, 255, 1);
+    clear: both;
+    color: rgba(19, 104, 155, 1); 
+    display: flex;
+    height: auto;
+    margin: 0;
+    min-height: 60vh;
+    padding: 0;
+    width: 100%;
+}
+
+main div.productCon > div {
+    flex: 2.5;
+}
+
+main div.productCon > div:nth-child(2) {
+    flex: 3;
+    padding: 1em 5em;
+}
+
+main div.productCon > div:nth-child(2) h2 {
+    font-family: inderRegular;
+    font-size: 2.5em;
+    margin: 0;
+    padding: 0.5em 0;
+}
+
+main div.productCon > div:nth-child(2) p {
+    font-family: inderRegular;
+    font-size: 1.2em;
+    margin: 0 0 1em 0;
+    padding: 1em 0;
+    text-align: justify;
+}
+
+main div.productCon > div:nth-child(2) a {
+    border: 2px solid rgba(19, 104, 155, 1);
+    font-family: inderRegular;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+
+
+
+
+
+main div.productCon:nth-child(2n+1) {
+    background-color: rgba(220, 220, 220, 1);
+    color: rgba(19, 104, 155, 1);
+}
+
+main div.productCon:nth-child(2n+1) > div:nth-child(2) a  {
+    border: 2px solid rgba(19, 104, 155, 1);
+    color: rgba(19, 104, 155, 1);    
+}
+
+
+main div.productCon:nth-child(3n+1) {
+    background-color: rgba(19, 104, 155, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+main div.productCon:nth-child(3n+1) > div:nth-child(2) a  {
+    border: 2px solid rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+
+
+
+
+main #productDetails {
+    background-color: rgba(255, 255, 255, 1);
+    clear: both;
+    color: rgba(19, 104, 155, 1); 
+    height: auto;
+    margin: 0;
+    min-height: 100vh;
+    padding: 2em 0;
+    width: 100%;
+}
+
+main #productDetails .container p {
+    color: rgba(100, 100, 100, 1);
+    font-family: inderRegular;
+    font-size: 1em;
+    padding: 0.5em 0;
+    text-align: justify;
+}
+
+main #productDetails .container img {
+    clear: both;
+    margin: 2em auto;
+}
+
+main #productDetails .container a {
+    border: 2px solid rgba(19, 104, 155, 1);
+    clear: both;
+    color: rgba(19, 104, 155, 1);
+    display: block;
+    font-size: 2.5em;
+    margin: 1em 0;
+    padding: 0.5em 1em;
+    text-align: center;
+    text-decoration: none;
+}
+
+main #productDetails .container a:hover {
+    background-color: rgba(19, 104, 155, 1);
+    border: 2px solid rgba(19, 104, 155, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+
+
+/* Contact Page Styles Here
+---------------------------------------------*/
+
+
+main #contactCon {
+    clear: both;
+    display: flex;
+    height: auto;
+    margin: 0;
+    min-height: 70vh;
+    padding: 2em 0;
+    width: 100%;
+}
+
+
+
+main #contactCon > div {
+    flex: 3;
+    margin: 0;
+    padding: 2em;
+}
+
+
+main #contactCon > div form .form-group .input-group span[id*=addon] {
+    color: rgba(255, 255, 255, 1);
+}
+
+
+
+main #contactCon > div:nth-child(2) {
+    flex: 2.5;
+}
+
+main #contactCon > div:nth-child(2) div#map {
+    clear: both;
+    padding: 0 0 1em 0;
+}
+
+main #contactCon > div:nth-child(2) div#map iframe {
+    height: auto;
+    min-height: 225px;
+    width: 100%;
+}
+
+
+main #contactCon > div:nth-child(2) div#address {
+    clear: both;
+    padding: 1em 0 0 0;
+}
+
+main #contactCon > div:nth-child(2) div#address h2 {
+    clear: both;
+    color:rgba(19, 104, 155, 1);
+    font-family: inderRegular;
+    font-size: 1.5em;
+    padding: 0.5em 0 0 0;
+}
+
+main #contactCon > div:nth-child(2) div#address label {
+    clear: both;
+    color:rgba(19, 104, 155, 1);
+    font-family: inderRegular;
+    font-size: 1em;
+    padding: 0.5em 0 0 0;
+}
+
+main #contactCon > div:nth-child(2) div#address p {
+    clear: both;
+    font-family: inderRegular;
+    font-size: 1em;
+    padding: 0;
+}
+

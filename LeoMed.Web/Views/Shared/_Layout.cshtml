@@ -1,0 +1,83 @@
+﻿@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>@ViewData["Title"] - LeoMed | ...get help the right way </title>
+
+     <link rel="shortcut icon" href="/Content/images/favicon.ico" type="image/x-icon" />
+     <link href="~/Content/Styles/fonts.css" rel="stylesheet" />
+     <link href="~/Content/Styles/bootstrap.min.css" rel="stylesheet" />
+     <link href="~/Content/Styles/jquery-ui.min.css" rel="stylesheet" />
+     <link href="~/Content/Styles/myglyphicons2.css" rel="stylesheet" />
+     <link href="~/Content/Styles/font-awesome.css" rel="stylesheet" />
+     <link href="~/Content/Styles/site.css" rel="stylesheet" />
+     <link href="~/Content/Styles/animate.css" rel="stylesheet" />
+
+     <link href="@ViewBag.Styles" rel="stylesheet" />
+
+</head>
+<body>
+     <header>
+          <div class="container-fluid">
+               <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <h1>
+                         <a href="/">
+                              <img alt="LeoMed" src="~/Content/images/logo_white.png" />
+                         </a>
+                    </h1>
+               </div>
+
+               <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                    @await Html.PartialAsync("_LoginPartial")
+               </div>
+          </div>
+     </header>
+     <main>
+          @RenderBody()
+     </main>
+     <footer>
+          <div class="container-fluid text-center">
+               <p>&copy;@DateTime.Now.Year all rights reserved. LeoMed - <span>get help the right way</span></p>
+          </div>
+     </footer>
+
+     <script src="~/Content/scripts/jquery-3.2.1.min.js"></script>
+     <script src="~/Content/scripts/bootstrap.min.js"></script>
+     @*<script src="~/Content/scripts/modernizr.js"></script>*@
+     <script src="~/Content/scripts/jquery-ui.min.js"></script>
+     <script src="~/Content/scripts/jquery.validate.js"></script>
+     <script src="~/Content/scripts/jquery.unobtrusive-ajax.min.js"></script>
+     <script src="~/Content/scripts/list.min.js"></script>
+     <script src="~/Content/scripts/myScripts.js"></script>
+     <script src="~/Content/scripts/wow.min.js"></script>
+     <script>
+          var wow = new WOW(
+               {
+                    boxClass: 'wow',      // animated element css class (default is wow)
+                    animateClass: 'animated', // animation css class (default is animated)
+                    offset: 0,          // distance to the element when triggering the animation (default is 0)
+                    mobile: true,       // trigger animations on mobile devices (default is true)
+                    live: true,       // act on asynchronously loaded content (default is true)
+                    callback: function (box) {
+                         // the callback is fired every time an animation is started
+                         // the argument that is passed in is the DOM node being animated
+                    },
+                    scrollContainer: null // optional scroll container selector, otherwise use window
+               }
+          );
+          wow.init();
+     </script>
+
+     @RenderSection("Scripts", required: false)
+     <script>
+          (function (d, s, id) {
+               var js, fjs = d.getElementsByTagName(s)[0];
+               if (d.getElementById(id)) return;
+               js = d.createElement(s); js.id = id;
+               js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
+               fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));</script>
+</body>
+</html>

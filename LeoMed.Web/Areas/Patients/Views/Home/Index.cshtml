@@ -1,0 +1,86 @@
+﻿@{
+     ViewBag.Title = "Home";
+}
+
+<div id="dashHeader">
+     <div class="container-fluid">
+          <h2><span class="glyphicons glyphicons-list"></span> Dashboard </h2>
+     </div>
+</div>
+
+<div id="dashboardCon">
+     <div class="container-fluid">
+          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+               <div id="summary" class="wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
+
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow fadeInRight" data-wow-duration="1s" data-wow-delay="2s">
+                         <div class="img-circle bg-info">
+                              <h2>@ViewData["historyCounter"]</h2>
+                              <h4>Histories</h4>
+                         </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow fadeInRight" data-wow-duration="1s" data-wow-delay="2s">
+                         <div class="img-circle bg-success">
+                              <h2>@ViewData["profCounter"]</h2>
+                              <h4>Professionals</h4>
+                         </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow fadeInRight" data-wow-duration="1s" data-wow-delay="2s">
+                         <div class="img-circle bg-primary">
+                              <h2>@ViewData["newsCounter"]</h2>
+                              <h4>News</h4>
+                         </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow fadeInRight" data-wow-duration="1s" data-wow-delay="2s">
+                         <div class="img-circle bg-danger">
+                              <h2>@ViewData["blogCounter"]</h2>
+                              <h4>Blogs</h4>
+                         </div>
+                    </div>
+
+               </div>
+               <div id="nav">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="4s">
+                         <a class="btn-primary img-circle img-thumbnail" href="#">
+                              <span class="fa fa-sticky-note"></span>
+                              <label>Add History</label>
+                         </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="4s">
+                         <a class="btn-success img-circle img-thumbnail" href="#">
+                              <span class="glyphicons glyphicons-old-man"></span>
+                              <label>Add Pro</label>
+                         </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="4s">
+                         <a class="btn-danger img-circle img-thumbnail" href="#">
+                              <span class="glyphicons glyphicons-newspaper"></span>
+                              <label>Add News</label>
+                         </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="4s">
+                         <a class="btn-info img-circle img-thumbnail" href="#">
+                              <span class="glyphicons glyphicons-blog"></span>
+                              <label>Add Blog</label>
+                         </a>
+                    </div>
+
+               </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+               <div id="salesTickerCon" class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="2s">
+                    <h2><span class="glyphicons glyphicons-notes-2"></span> Latest Record Added</h2>
+               </div>
+
+               <div id="productTickerCon" class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="3s">
+                    <h2><span class="glyphicons glyphicons-old-man"></span> Most Seen Pro</h2>
+               </div>
+          </div>
+     </div>
+</div>

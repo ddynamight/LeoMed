@@ -1,0 +1,78 @@
+@model IEnumerable<LeoMed.Model.Professional>
+
+
+@{
+     ViewBag.Title = "Professionals";
+}
+
+
+<div id="listHeader">
+     <div class="container-fluid">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+               <h2 class="text-success">
+                    <span class="fa fa-group"></span> Professionals
+                    <label class="badge">@Model.Count()</label>
+               </h2>
+               <p>list of professionals </p>
+          </div>
+
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+               
+          </div>
+          
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+
+          </div>
+     </div>
+</div>
+
+
+<div id="listCon">
+     <div class="container-fluid">
+          <table class="table table-condensed table-hover table-striped table-bordered table-responsive">
+               <tr>
+                    <th>
+
+                    </th>
+                    <th>
+                         Name
+                    </th>
+                    <th>
+                         Professional
+                    </th>
+                    <th>
+                         Sex
+                    </th>
+                    <th>
+                         Date of Birth
+                    </th>
+               </tr>
+
+               @foreach (var item in Model.OrderByDescending(e => e.AppUser.Lastname))
+               {
+                    <tr>
+                         <td>
+                              <a class="btn btn-success" href="/Admin/Professionals/Details/@item.AppUser.UserName"><span class="glyphicons glyphicons-nameplate"></span> View Details </a>
+                         </td>
+                         <td>
+                              @item.AppUser.Title @item.AppUser.Lastname, @item.AppUser.Firstname @item.AppUser.Middlename <span class="badge">@item.Histories.Count()</span>
+                         </td>
+                         <td>
+                              @item.Profession
+                         </td>
+                         <td>
+                              @item.AppUser.Sex
+                         </td>
+                         <td>
+                              @item.AppUser.DateOfBirth.ToString("D")
+                         </td>
+                    </tr>
+               }
+
+          </table>
+     </div>
+</div>

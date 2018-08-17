@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>@ViewBag.Title | LeoMed</title>
+     <link href="~/Content/styles/fonts.css" rel="stylesheet" />
+     <link href="~/Content/styles/bootstrap.min.css" rel="stylesheet" />
+     <link href="~/Content/styles/myglyphicons2.css" rel="stylesheet" />
+     <link href="~/Content/styles/font-awesome.css" rel="stylesheet" />
+     <link href="~/Content/styles/animate.css" rel="stylesheet" />
+     <link href="~/Content/styles/patients.css" rel="stylesheet" />
+
+     <script src="~/Content/scripts/jquery-3.2.1.min.js"></script>
+     <script src="~/Content/scripts/bootstrap.min.js"></script>
+     <script src="~/Content/scripts/myScripts.js"></script>
+     <script src="~/Content/scripts/wow.min.js"></script>
+     <script>
+          var wow = new WOW(
+               {
+                    boxClass: 'wow',      // animated element css class (default is wow)
+                    animateClass: 'animated', // animation css class (default is animated)
+                    offset: 0,          // distance to the element when triggering the animation (default is 0)
+                    mobile: true,       // trigger animations on mobile devices (default is true)
+                    live: true,       // act on asynchronously loaded content (default is true)
+                    callback: function (box) {
+                         // the callback is fired every time an animation is started
+                         // the argument that is passed in is the DOM node being animated
+                    },
+                    scrollContainer: null // optional scroll container selector, otherwise use window
+               }
+          );
+          wow.init();
+     </script>
+</head>
+<body>
+     <header>
+          <div class="container-fluid">
+               <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <h1>
+                         <a href="/">
+                              <img alt="LeoMed" src="~/Content/images/logo.png" />
+                         </a>
+                    </h1>
+               </div>
+
+               <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                    <ul class="nav nav-pills text-right">
+                         <li>
+                              <a href="/Patients/Home"><span class="glyphicons glyphicons-dashboard"></span> Dashboard</a>
+                         </li>
+                         <li>
+                              <a class="text-success" href="/Patients/Histories/"><span class="glyphicons glyphicons-invoice"></span> Histories</a>
+                         </li>
+                         <li>
+                              <a class="text-danger" href="/Patients/News/"><span class="glyphicons fa fa-newspaper-o"></span> News</a>
+                         </li>
+                         <li>
+                              <a class="text-primary" href="/Patients/Blogs/"><span class="glyphicons glyphicons-blog"></span> Blogs</a>
+                         </li>
+                    </ul>
+               </div>
+
+               <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12 text-right">
+                    <div class="btn-group dropdown">
+                         <span class="btn glyphicons glyphicons-user dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="accountDD"></span>
+
+                         <ul class="dropdown-menu" aria-labelledby="accountDD">
+                              <li><a href="#"><span class="glyphicons glyphicons-stats"></span> Report</a></li>
+                              <li role="separator" class="divider"></li>
+                              <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span> Help</a></li>
+                              <li><a href="#"><span class="glyphicons glyphicons-shield"></span> Change Password</a></li>
+                              <li role="separator" class="divider"></li>
+                              <li><a href="javascript:document.getElementById('logoutForm').submit()"><span class="glyphicons glyphicons-log-out"></span> Log Off</a></li>
+                         </ul>
+
+                    </div>
+               </div>
+          </div>
+     </header>
+
+     <section>
+          @RenderBody()
+     </section>
+
+     <footer>
+          <div class="container-fluid">
+               <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                    <p>&copy; @DateTime.Now.Year. all rights reserved. LeoMed</p>
+               </div>
+          </div>
+     </footer>
+
+     @if (User.Identity.IsAuthenticated)
+     {
+          <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm">
+               @Html.AntiForgeryToken()
+          </form>
+     }
+</body>
+</html>

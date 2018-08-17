@@ -1,0 +1,468 @@
+﻿body, header, main, article, aside, div, form, img, h1, h2, h3, h4, h5, h6, p, a, hr, br, input, select
+{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	clear: both;
+	font-family: 'Segoe UI';
+	width: 100%;
+}
+
+
+#padder {
+     background-color: transparent !important;
+     clear: both;
+     color: rgba(255, 255, 255, 1);
+     height: auto;
+     margin: 0;
+     min-height: 10px;
+     padding: 0.5em 0;
+     position: absolute;
+     top: 0;
+     width: 100%;
+     z-index: 1000;
+}
+
+#padder .container-fluid div[class*=col] p
+{
+     background-color: transparent !important;
+}
+
+
+header {
+    background-color: transparent !important;
+    clear: both;
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    margin: 0;
+    min-height: 50px;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+header .container-fluid {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+header .container-fluid div[class*=col-] {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+header .container-fluid div[class*=col-] h1 {
+    font-family: inderRegular;
+    font-size: 3em;
+    padding: 0.2em 0;
+}
+
+header .container-fluid div[class*=col-] h1 span {
+    float: left;
+    padding: 0.3em 0 0 0;
+}
+
+header .container-fluid div[class*=col-] h1 a {
+	text-align: left;
+	text-decoration: none;
+}
+
+header .container-fluid div[class*=col-] h1 a:hover {
+    text-decoration: none;
+}
+
+header .container-fluid div[class*=col-] h1 a img {
+    float: left;
+    max-height: 120px;
+    padding: 0 0.2em;
+}
+
+
+header .container-fluid div[class*=col-] p {
+    font-size: 1.0em;
+    font-style: italic;
+    font-weight: 900;
+    padding: 0 1.5em;
+}
+
+
+header .container-fluid div[class*=col-] nav {
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+header .container-fluid div[class*=col-] nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+header .container-fluid div[class*=col-] nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+header .container-fluid div[class*=col-] nav ul li a {
+    background-color: transparent !important;
+    color: rgba(255, 255, 255, 1);
+    font-family: inderRegular;
+    font-size: 1.2em;
+    margin: 0em;
+    padding: 2.1em 0.7em;
+}
+
+header .container-fluid div[class*=col-] nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+	color: rgba(255, 255, 255, 1);
+}
+
+header .container-fluid div[class*=col-] nav ul li ul {
+    background-color: transparent !important;
+}
+
+header .container-fluid div[class*=col-] nav ul li ul li a {
+    font-family: inderRegular;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0.5em 1em;
+}
+
+/*Nav Media Queries for Extra Small Devices
+------------------------------------------------*/
+
+@media all and (max-width: 768px) {
+
+	header .container-fluid div[class*=col-] nav .narbar-header {
+	color: rgba(39, 169, 225, 1);
+	}
+	
+	header .container-fluid div[class*=col-] nav button {
+	background-color: rgba(39, 169, 225, 1);
+	color: rgba(255, 255, 255, 1);
+	}
+	
+	header .container-fluid div[class*=col-] nav button span.icon-bar {
+		color: rgba(255, 255, 255, 1);
+	}
+	
+	
+	header .container-fluid div[class*=col-] nav ul li a {
+	color: rgba(35, 54, 57, 1);
+    font-family: inderRegular;
+    font-size: 1em;
+    margin: 0em;
+    padding: 0.7em 1em;
+    }
+
+	header .container-fluid div[class*=col-] nav ul li ul li a {
+	color: rgba(39, 169, 225, 1);
+    font-family: inderRegular;
+    font-size: 1em;
+    margin: 0em;
+    padding: 0.7em 1em;
+    }
+}
+
+/*Nav Media Queries for Small Devices
+------------------------------------------------*/
+
+
+@media all and (min-width: 768px) and (max-width: 992px) {	
+	header .container-fluid div[class*=col-] nav ul li a {
+	color: rgba(39, 169, 225, 1);
+    font-family: inderRegular;
+    font-size: 0.9em;
+    margin: 0em;
+    padding: 2.3em 0.7em;
+    }
+
+	header .container-fluid div[class*=col-] nav ul li ul li a {
+	color: rgba(39, 169, 225, 1);
+    font-family: inderRegular;
+    font-size: 0.9em;
+    margin: 0em;
+    padding: 0.7em;
+    }
+}
+
+/*Nav Media Queries for Medium Devices
+------------------------------------------------*/
+
+@media all and (min-width: 992px) and  (max-width: 1200px) {	
+	header .container-fluid div[class*=col-] nav ul li a {
+	color: rgba(39, 169, 225, 1);
+    font-family: inderRegular;
+    font-size: 1.1em;
+    margin: 0em;
+    padding: 2.7em 1em;
+    }
+
+	header .container-fluid div[class*=col-] nav ul li ul li a {
+	color: rgba(39, 169, 225, 1);
+    font-family: inderRegular;
+    font-size: 1.1em;
+    margin: 0em;
+    padding: 0.7em 1em;
+    }
+}
+
+/* HEADER STYLES END HERE
+-------------------------------------------------------------*/
+
+
+
+
+
+main {
+     clear: both;
+     height: auto;
+     margin: 0;
+     min-height: 60vh;
+     padding: 0;
+     width: 100%;
+}
+
+
+
+
+main #banner {
+     background-image: url("/Content/images/banner1.png");
+     border-bottom: 1px solid rgba(255, 255, 255, 1);
+     clear: both;
+     height: 100vh;
+     margin: 0;
+     padding: 0;
+     width: 100%;
+}
+
+main #banner .container-fluid {
+     padding-top: 8em;
+}
+
+main #banner .container-fluid div[class*=col] #bannerText{
+     clear: both;
+     color: rgba(255, 255, 255, 1);
+     float: left;
+     padding: 9em 0 0 2em;
+}
+
+main #banner .container-fluid div[class*=col] #bannerText h2 {
+     font-family: inderRegular;
+     font-size: 5em;
+}
+
+main #banner .container-fluid div[class*=col] #bannerText h2 span {
+     color: rgba(39, 169, 225, 1);
+     font-style: italic;
+}
+
+main #banner .container-fluid div[class*=col] #bannerText p {
+     font-size: 2em;
+     font-style: italic;
+}
+
+main #banner .container-fluid div[class*=col] #accountDetails
+{
+     background-color: transparent;
+}
+
+main #banner .container-fluid div[class*=col] #accountDetails ul
+{
+     background-color: transparent !important;
+     display: flex;
+}
+
+main #banner .container-fluid div[class*=col] #accountDetails ul li
+{
+     background-color: transparent !important;
+     flex: 1;
+}
+
+main #banner .container-fluid div[class*=col] #accountDetails ul li a
+{
+     background-color: transparent !important;
+     border: none;
+     border-radius: 0;
+     color: rgba(200, 200, 200, 1);
+     font-family: inderRegular;
+}
+
+main #banner .container-fluid div[class*=col] #accountDetails ul li.active a
+{
+     background-color: rgba(39, 169, 225, 1) !important;
+     color: rgba(255, 255, 255, 1);
+}
+
+main #banner .container-fluid div[class*=col] #accountDetails form
+{
+     background-color: rgba(39, 169, 225, 0.3);
+     clear: both;
+     color: rgba(255, 255, 255, 1);
+     height: auto;
+     min-height: 65vh;
+     padding: 2em;
+     width: 100%;
+}
+
+
+main #banner .container-fluid div[class*=col] #accountDetails form h2
+{
+     clear: both;
+     color: rgba(255, 255, 255, 1);
+     font-family: inderRegular;
+     font-size: 1.25em;
+     padding: 1em 0;
+     text-align: center;
+}
+
+main #banner .container-fluid div[class*=col] #accountDetails form input
+{
+     background-color: transparent !important;
+     clear: both;
+     color: rgba(255, 255, 255, 1);
+}
+
+main #banner .container-fluid div[class*=col] #accountDetails form button
+{
+     background-color: transparent !important;
+     border: 1px solid rgba(255, 255, 255, 1);
+     clear: both;
+     color: rgba(255, 255, 255, 1);
+     margin-top: 1em;
+     width: calc(100% - 50%);
+}
+
+/* BANNER SECTION ENDS HERE
+-------------------------------------------------*/
+
+
+
+main #indexCol {
+     clear: both;
+     height: auto;
+     margin: 0;
+     min-height: 200px;
+     padding: 5em 0;
+     width: 100%;
+}
+
+main #indexCol .container-fluid div[class*=col] div
+{
+     clear: both;
+     margin: 0 auto;
+     overflow: hidden;
+     width: calc(100% - 10%);
+}
+
+
+main #banner .container-fluid div[class*=col] div img 
+{
+     clear: both;
+     margin: 0;
+     padding: 2em 0 0 0;
+}
+
+main #indexCol .container-fluid div[class *=col] div h2
+{
+     clear: both;
+     color: rgba(39, 169, 225, 1);
+     font-family: inderRegular;
+     font-size: 1.75em;
+     padding: 1em 0 0 0;
+}
+
+
+main #indexCol .container-fluid div[class*=col] div p
+{
+     font-family: "Segoe UI";
+     font-size: 0.85em;
+     text-align: justify;
+}
+
+
+
+main #indexNewsletter {
+     background-attachment: scroll;
+     background-image: url('/Content/images/indexNewsletter.png');
+     background-position: center center;
+     background-repeat: no-repeat;
+     clear: both;
+     color: rgba(255, 255, 255, 1);
+     height: auto;
+     margin: 0;
+     min-height: 300px;
+     padding: 2em 0;
+     text-align: center;
+     width: 100%;
+}
+
+
+main #indexNewsletter .container div[class*=col] img
+{
+     border: 1px solid rgba(255, 255, 255, 1);
+     border-radius: 100em;
+     margin: 1em auto;
+}
+
+main #indexNewsletter .container div[class*=col] h2{
+     font-family: inderRegular;
+     font-size: 1.5em;
+}
+
+main #indexNewsletter .container div[class*=col] h3 {
+     font-family: inderRegular;
+     font-size: 1.2em;
+}
+
+main #indexNewsletter .container div[class*=col] h4 {
+     font-size: 1.2em;
+}
+
+
+main #indexNewsletter .container div[class*=col] div {
+     padding: 5em 0;
+}
+
+main #indexNewsletter .container div[class*=col] div p {
+     font-family: playballregular;
+     font-size: 1.5em;
+     text-transform: lowercase;
+}
+
+
+main #indexNews {
+     clear: both;
+     height: auto;
+     margin: 0;
+     min-height: 300px;
+     padding: 5em 0;
+     text-align: center;
+     width: 100%;
+}
+
+
+
+/* FOOTER SECTION HERE
+-------------------------------------------------*/
+
+footer {
+     background-color: rgba(39, 169, 225, 1);
+     clear: both;
+     color: rgba(255, 255, 255, 1);
+     height: auto;
+     margin: 0;
+     min-height: 10px;
+     padding: 1em 0;
+     width: 100%;
+}
+
+
+footer .container-fluid p {
+    font-size: 1em;
+    padding: 0;
+}

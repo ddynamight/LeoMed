@@ -1,0 +1,68 @@
+@{
+     ViewData["Title"] = "Create Patient";
+     Layout = "~/Views/Shared/_Account.cshtml";
+}
+
+
+<div id="innerCon">
+     <div class="container text-center">
+          <h2><span class="fa fa-user"></span> Update Patient Profile</h2>
+     </div>
+
+     <div class="container">
+          <form asp-controller="Account" asp-action="CreatePatient" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                         <label for="titleTb">Title</label>
+                         <input type="text" class="form-control" id="titleTb" name="Title" placeholder="Prof.">
+                    </div>
+
+                    <div class="form-group">
+                         <label for="firstnameTb">Firstname</label>
+                         <input type="text" class="form-control" id="firstnameTb" name="Firstname" placeholder="Firstname">
+                    </div>
+
+                    <div class="form-group">
+                         <label for="middlenameTb">Middlename</label>
+                         <input type="text" class="form-control" id="middlenameTb" name="Middlename" placeholder="Middlename">
+                    </div>
+
+                    <div class="form-group">
+                         <label for="lastnameTb">Lastname</label>
+                         <input type="text" class="form-control" id="lastnameTb" name="Lastname" placeholder="Lastname">
+                    </div>
+
+                    <div class="form-group">
+                         <label for="sexTb">Sex</label>
+                         <input type="text" class="form-control" id="sexTb" name="Sex" placeholder="Sex">
+                    </div>
+               </div>
+
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                         <label for="dobTb">Date of Birth</label>
+                         <input type="date" class="form-control" id="dobTb" name="DateofBirth" placeholder="Date of Birth">
+                    </div>
+
+                    <div class="form-group">
+                         <label for="addressTb">Addresss</label>
+                         <input type="text" class="form-control" id="addressTb" name="Location" placeholder="Address">
+                    </div>
+
+                    <div class="form-group">
+                         <label for="stateTb">State</label>
+                         <input type="text" class="form-control" id="stateTb" name="State" placeholder="State" >
+                    </div>
+
+                    <div class="form-group">
+                         <label for="countryTb">Country</label>
+                         <input type="text" class="form-control" id="countryTb" name="Country" placeholder="Country">
+                    </div>
+               </div>
+
+               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                    <button type="submit" class="btn btn-primary"><span class="fa fa-edit"></span> Register</button>
+               </div>
+          </form>
+     </div>
+</div>

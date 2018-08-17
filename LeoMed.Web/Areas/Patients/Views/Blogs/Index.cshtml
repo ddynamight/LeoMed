@@ -1,0 +1,94 @@
+@model IEnumerable<LeoMed.Model.Blog>
+
+@{
+    ViewBag.Title = "Blogs";
+}
+
+<div id="listHeader">
+    <div class="container-fluid">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+            <h2 class="text-success">
+                <span class="glyphicons glyphicons-blog"></span> Blogs
+                <label class="badge">@Model.Count()</label>
+            </h2>
+            <p>list of blogs </p>
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+            <div class="btn-group">
+                <button type="button" class="btn btn-success">Select Action</button>
+                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="/Invoice/Create"><span class="glyphicons glyphicons-invoice"></span> Add Invoice </a>  </li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="/Sales/Create"><span class="glyphicons glyphicons-shopping-cart"></span> Add Sales </a> </li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="/Products/Create"><span class="glyphicons glyphicons-shopping-bag"></span> Add Product </a> </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+
+        </div>
+    </div>
+</div>
+
+
+<div id="listCon">
+    <div class="container-fluid">
+        <table class="table table-condensed table-hover table-striped table-bordered table-responsive">
+            <tr>
+                 <th>
+
+                 </th>
+                <th>
+                    Blog Title
+                </th>
+                <th>
+                    Date Published
+                </th>
+            </tr>
+
+            @foreach (var item in Model.OrderByDescending(e => e.Date))
+            {
+                <tr>
+                     <td>
+                          <div class="btn-group">
+                               <button type="button" class="btn btn-success">Select Action</button>
+                               <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                               </button>
+                               <ul class="dropdown-menu">
+                                    <li><a href="/Invoice/Edit/@item.Id"><span class="glyphicons glyphicons-edit"></span> Edit Records </a> </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="/Invoice/Delete/@item.Id"><span class="glyphicons glyphicons-bin"></span> Delete Invoice </a> </li>
+                               </ul>
+                          </div>
+                     </td>
+                    <td>
+                        @item.Title
+                    </td>
+                    <td>
+                        @item.Date.ToString("D")
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+
+

@@ -1,0 +1,35 @@
+<div class="container-fluid">
+     @using (Html.BeginForm("Create", "Histories", FormMethod.Post, new { enctype = "multipart/form-data" }))
+     {
+          @Html.AntiForgeryToken()
+          @Html.ValidationSummary(true)
+
+
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+               <div class="form-group">
+                    <label for="typeTb">Record Type <span class="glyphicon glyphicon-question-sign"></span></label>
+
+                    <input class="form-control" id="typeTb" name="Type" placeholder="Record Type e.g. Diagnosis" type="text" />
+               </div>
+
+               <div class="form-group">
+                    <label for="ddlPatient">Select Patient Name <span class="glyphicon glyphicon-question-sign"></span></label>
+
+                    @Html.DropDownList("PatientAppUserId",  (SelectList)ViewData["patientDdl"], new { @class = "form-control", id = "ddlPatient" })
+               </div>
+
+               <div class="form-group">
+                    <label for="detailsTb">Record Details <span class="glyphicon glyphicon-question-sign"></span></label>
+
+                    <textarea class="form-control" id="detailsTb" name="Details" placeholder="Record Details e.g. This is the diagnosis description..." rows="6"></textarea>
+               </div>
+          </div>
+
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+               <p>
+                    <button type="submit" class="btn btn-lg btn-unique"><span class="glyphicon glyphicon-floppy-save"></span> Add Record</button>
+               </p>
+          </div>
+
+     }
+</div>

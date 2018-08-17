@@ -1,0 +1,99 @@
+@model IEnumerable<LeoMed.Model.AppUser>
+
+
+@{
+     ViewBag.Title = "Users";
+}
+
+
+<div id="listHeader">
+     <div class="container-fluid">
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+               <h2 class="text-success">
+                    <span class="fa fa-group"></span> Users
+                    <label class="badge">@Model.Count()</label>
+               </h2>
+               <p>list of users </p>
+          </div>
+
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+               <div class="btn-group">
+                    <button type="button" class="btn btn-success">Select Action</button>
+                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         <span class="caret"></span>
+                         <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                         <li><a href="/Patients/Create"><span class="glyphicons glyphicons-invoice"></span> Add Invoice </a>  </li>
+                         <li role="separator" class="divider"></li>
+                         <li><a href="/Sales/Create"><span class="glyphicons glyphicons-shopping-cart"></span> Add Sales </a> </li>
+                         <li role="separator" class="divider"></li>
+                         <li><a href="/Products/Create"><span class="glyphicons glyphicons-shopping-bag"></span> Add Product </a> </li>
+                    </ul>
+               </div>
+          </div>
+
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+
+          </div>
+     </div>
+</div>
+
+
+<div id="listCon">
+     <div class="container-fluid">
+          <table class="table table-condensed table-hover table-striped table-bordered table-responsive">
+               <tr>
+                    <th>
+
+                    </th>
+                    <th>
+                         Name
+                    </th>
+                    <th>
+                         Sex
+                    </th>
+                    <th>
+                         Date of Birth
+                    </th>
+               </tr>
+
+               @foreach (var item in Model.OrderByDescending(e => e.Lastname))
+               {
+                    <tr>
+                         <td>
+                              <div class="btn-group">
+                                   <button type="button" class="btn btn-success">Select Action</button>
+                                   <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="caret"></span>
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                   </button>
+                                   <ul class="dropdown-menu">
+                                        <li><a href="/Admin/Edit/@item.UserName"><span class="glyphicons glyphicons-edit"></span> Edit Records </a> </li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="/Admin/Delete/@item.UserName"><span class="glyphicons glyphicons-bin"></span> Delete User </a> </li>
+                                   </ul>
+                              </div>
+                         </td>
+                         <td>
+                              @item.Title @item.Lastname, @item.Firstname @item.Middlename                         </td>
+                         <td>
+                              @item.Sex
+                         </td>
+                         <td>
+                              @item.DateOfBirth.ToString("D")
+                         </td>
+                    </tr>
+               }
+
+          </table>
+     </div>
+</div>

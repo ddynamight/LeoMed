@@ -1,0 +1,27 @@
+﻿@{ 
+     ViewData["Title"] = "Account Type";
+     Layout = "~/Views/Shared/_Account.cshtml";
+}
+
+
+
+<div id="innerCon">
+     <div class="container text-center">
+          <h2>Select Profile Type</h2>
+     </div>
+     <div class="container">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center">
+               <a href="/Account/CreatePro">
+                    <span class="fa fa-medkit"></span>
+                    <h2>Medical <br> Professional <br> Profile</h2>
+               </a>
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center">
+               <a href="/Account/CreatePatient">
+                    <span class="fa fa-user"></span>
+                    <h2>Patient <br> Profile</h2>
+               </a>
+          </div>
+     </div>
+</div>

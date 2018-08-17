@@ -1,0 +1,74 @@
+@model LeoMed.Model.Patient
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+
+<div id="listHeader">
+     <div class="container-fluid">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+               <h2 class="text-success">
+                    <span class="fa fa-user"></span> @Model.AppUser.Lastname, @Model.AppUser.Firstname @Model.AppUser.Middlename 
+               </h2>
+          </div>
+     </div>
+</div>
+
+
+<div id="listCon">
+     @if (Model.Histories.Count() != 0)
+     {
+          <div class="container-fluid">
+               <table class="table table-responsive">
+                    <thead>
+                         <tr>
+                              <th>
+
+                              </th>
+                              <th>
+                                   Professional Name
+                              </th>
+                              <th>
+                                   Date Attended
+                              </th>
+                              <th>
+                                   Location
+                              </th>
+                         </tr>
+                    </thead>
+                    <tbody>
+                         @foreach (var item in Model.Histories)
+                         {
+                              <tr>
+                                   <td></td>
+                                   <td>
+                                        @item.Professional.AppUser.Lastname, @item.Professional.AppUser.Firstname @item.Professional.AppUser.Middlename
+                                   </td>
+                                   <td>
+                                        @item.Date.ToString("D")
+                                   </td>
+                                   <td>
+                                        @item.Patient.State, @item.Patient.Country
+                                   </td>
+                              </tr>
+                         }
+                    </tbody>
+               </table>
+          </div>
+     }
+     else
+     {
+          <div class="container-fluid text-center">
+               <h2>No Record Added Yet!</h2>
+               <p>This patient has no record yet!</p>
+               <br />
+               <a class="btn btn-danger" href="/Admin/Patients"><span class="fa fa-back"></span> Back to Patients</a>
+          </div>
+     }
+
+
+
+</div>

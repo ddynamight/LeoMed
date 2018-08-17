@@ -1,0 +1,104 @@
+@model IEnumerable<LeoMed.Model.History>
+
+     @{
+          ViewBag.Title = "Histories";
+     }
+
+     <div id="listHeader">
+          <div class="container-fluid">
+               <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                    <h2 class="text-success">
+                         <span class="glyphicons glyphicons-blog"></span> Histories
+                         <label class="badge">@Model.Count()</label>
+                    </h2>
+                    <p>list of records</p>
+               </div>
+
+               <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                    
+               </div>
+
+               <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+
+               </div>
+
+               <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+
+               </div>
+
+               <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+
+               </div>
+          </div>
+     </div>
+
+
+     <div id="listCon">
+          <div class="container-fluid">
+               <table class="table table-condensed table-hover table-striped table-bordered table-responsive">
+                    <tr>
+                         <th>
+
+                         </th>
+                         <th>
+                              Patient No
+                         </th>
+                         <th>
+                              Patient
+                         </th>
+                         <th>
+                              History Type
+                         </th>
+                         <th>
+                              Date Published
+                         </th>
+                         <th>
+                              Professional
+                         </th>
+                    </tr>
+
+                    @foreach (var item in Model.OrderByDescending(e => e.Date))
+                    {
+                         <tr>
+                              <td>
+                                   <a class="btn btn-success" href="/Admin/Histories/Details/@item.Id"><span class="glyphicons glyphicons-nameplate"></span> View Details </a>
+                              </td>
+                              <td>
+                                   @item.Patient.PatientNo
+                              </td>
+                              <td>
+                                   @item.Patient.AppUser.Title @item.Patient.AppUser.Lastname, @item.Patient.AppUser.Middlename.Substring(0, 1) @item.Patient.AppUser.Firstname
+                              </td>
+                              <td>
+                                   @item.Type
+                              </td>
+                              <td>
+                                   @item.Date.ToString("D")
+                              </td>
+                              <td>
+                                   @item.Professional.AppUser.Title @item.Professional.AppUser.Lastname, @item.Professional.AppUser.Middlename.Substring(0, 1) @item.Professional.AppUser.Firstname
+                              </td>
+                         </tr>
+                    }
+
+               </table>
+          </div>
+     </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+     <div class="modal-dialog" role="document">
+          <div class="modal-content">
+               <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"><span class="fa fa-book"></span> Add Course</h4>
+               </div>
+               <div class="modal-body">
+                    @await Html.PartialAsync("Create")
+               </div>
+               <div class="modal-footer">
+               </div>
+          </div>
+     </div>
+</div>

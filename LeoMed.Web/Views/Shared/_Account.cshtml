@@ -1,0 +1,117 @@
+﻿
+<!doctype html>
+
+<html>
+<head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>@ViewData["Title"] - LeoMed | ...get help the right way </title>
+
+     <link rel="shortcut icon" href="/Content/images/favicon.ico" type="image/x-icon" />
+     <link href="~/Content/Styles/fonts.css" rel="stylesheet" />
+     <link href="~/Content/Styles/bootstrap.min.css" rel="stylesheet" />
+     <link href="~/Content/Styles/jquery-ui.min.css" rel="stylesheet" />
+     <link href="~/Content/Styles/myglyphicons2.css" rel="stylesheet" />
+     <link href="~/Content/Styles/font-awesome.css" rel="stylesheet" />
+     <link href="~/Content/Styles/animate.css" rel="stylesheet" />
+</head>
+<body>
+     <header>
+          <div class="container-fluid">
+               <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <h1>
+                         <a href="/Home">
+                              <img src="~/Content/images/logo.png" />
+                         </a>
+                    </h1>
+               </div>
+               <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                    @await Html.PartialAsync("_LoginPartial")
+               </div>
+          </div>
+     </header>
+     <main>
+          @RenderBody()
+     </main>
+     <footer>
+          <div class="container-fluid text-center">
+               <p>&copy;@DateTime.Now.Year all rights reserved. LeoMed - <span>get help the right way</span></p>
+          </div>
+     </footer>
+
+
+     <style type="text/css">
+          header {
+               border-bottom: 1px solid rgba(39, 169, 225, 1);
+               clear: both;
+               height: auto;
+               min-height: 50px;
+               width: 100%;
+          }
+
+               header .container-fluid h1 a img {
+                    height: 80px;
+               }
+
+
+          main {
+               clear: both;
+               height: auto;
+               margin: 0;
+               min-height: 75vh;
+               padding: 0;
+               width: 100%;
+          }
+
+               main #innerCon {
+                    clear: both;
+                    width: 100%;
+               }
+
+                    main #innerCon .container {
+                         padding-bottom: 2em;
+                    }
+
+                         main #innerCon .container h2 {
+                              color: rgba(39, 169, 225, 1);
+                              font-family: inderRegular;
+                              font-size: 1.75em;
+                         }
+
+                         main #innerCon .container div[class*=col] a {
+                              text-decoration: none;
+                         }
+
+                              main #innerCon .container div[class*=col] a span {
+                                   font-size: 4em;
+                                   text-align: center;
+                              }
+
+                              main #innerCon .container div[class*=col] a h2 {
+                                   color: rgba(10, 10, 10, 1);
+                                   font-size: 1.75em;
+                                   text-align: center;
+                              }
+
+
+          footer {
+               background-color: rgba(39, 169, 225, 1);
+               bottom: 0;
+               clear: both;
+               color: rgba(255, 255, 255, 1);
+               height: auto;
+               margin: 0;
+               min-height: 10px;
+               padding: 1em 0;
+               position: sticky;
+               width: 100%;
+          }
+
+
+               footer .container-fluid p {
+                    font-size: 1em;
+                    padding: 0;
+               }
+     </style>
+</body>
+</html>

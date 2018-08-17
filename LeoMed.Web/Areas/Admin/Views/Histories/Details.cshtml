@@ -1,0 +1,45 @@
+@model LeoMed.Model.History
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<div id="listHeader">
+     <div class="container-fluid">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+               <h2 class="text-success">
+                    <span class="fa fa-user"></span> @Model.Patient.AppUser.Lastname, @Model.Patient.AppUser.Firstname @Model.Patient.AppUser.Middlename History Details
+               </h2>
+          </div>
+     </div>
+</div>
+
+
+<div id="listCon">
+     <div class="container-fluid">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+               <h2>Patient Details</h2>
+               <h4>@Model.Patient.AppUser.Lastname, @Model.Patient.AppUser.Firstname @Model.Patient.AppUser.Middlename </h4>
+               <h4>Sex: @Model.Patient.AppUser.Sex </h4>
+               <h4>Email: @Model.Patient.AppUser.Email</h4>
+               <h4>Address: @Model.Patient.Location, @Model.Patient.State, @Model.Patient.Country</h4>
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+               <h2>Professional Details</h2>
+               <h4>@Model.Professional.AppUser.Title @Model.Professional.AppUser.Lastname, @Model.Professional.AppUser.Firstname @Model.Professional.AppUser.Middlename </h4>
+
+               <h4>@Model.Professional.Profession with @Model.Professional.Experience Experience</h4>
+               <h4>Sex: @Model.Professional.AppUser.Sex </h4>
+               <h4>@Model.Professional.AppUser.Email</h4>
+          </div>
+     </div>
+
+     <div class="container-fluid">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+               <h2>Record Details</h2>
+               <h4>@Model.Details</h4>
+          </div>
+     </div>
+</div>
